@@ -1,5 +1,6 @@
 package inheritancepractice;
 
+import concrete.*;
 
 public class Driver {
 
