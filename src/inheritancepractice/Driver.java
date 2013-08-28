@@ -30,8 +30,7 @@ public class Driver {
         
         //Test Salaried plus bonus employee
         employee = new abstract1.SalaryPlusBonusEmployee("Jane", 42, "female", 50000);
-        employee.setBonus(5000);
-        
+        employee.setBonus(5000.00);
         
         System.out.println("Test for salaried employee:");
         System.out.println(employee + "\n");

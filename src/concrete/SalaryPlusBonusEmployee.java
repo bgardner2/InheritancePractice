@@ -5,7 +5,7 @@ public class SalaryPlusBonusEmployee {
     private int age;
     private String gender;
     private double yearlySalary;
-    double bonus;
+    private double bonus;
 
     public SalaryPlusBonusEmployee(String name, int age, String gender, double yearlySalary) {
         this.name = name;
