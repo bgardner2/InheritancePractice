@@ -54,7 +54,7 @@ public class SalariedEmployee {
         return "SalariedEmployee{" + "name=" + name 
                 + ", age=" + age 
                 + ", gender=" + gender 
-                + ", yearlySalary=" + yearlySalary + '}';
+                + ", yearlySalary=" + yearlySalary + "}\n";
     }
     
     

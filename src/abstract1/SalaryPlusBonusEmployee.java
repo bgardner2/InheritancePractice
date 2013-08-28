@@ -23,8 +23,8 @@ public class SalaryPlusBonusEmployee extends SalariedEmployee {
 
     @Override
     public String toString() {
-        return super.toString() + " SalaryPlusBonusEmployee{" 
-                + "bonus=" + formatToCurrency(getYearlySalary() + bonus) + '}';
+        return super.toString() + "SalaryPlusBonusEmployee{" 
+                + "Yearly salary plus  bonus=" + formatToCurrency(getYearlySalary()) + "}\n";
     }
     
     

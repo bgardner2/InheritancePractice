@@ -41,7 +41,7 @@ public class Employee {
     public String toString() {
         return "Employee{" + "name=" + name 
                 + ", age=" + age 
-                + ", gender=" + gender + '}';
+                + ", gender=" + gender + "}\n";
     }
     
     

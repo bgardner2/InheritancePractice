@@ -22,9 +22,9 @@ public class SalariedEmployee extends Employee{
 
     @Override
     public String toString() {
-        return super.toString() + " SalariedEmployee{" 
+        return super.toString() + "SalariedEmployee{" 
                 + "yearlySalary=$" + formatToCurrency(yearlySalary) 
-                + ", monthlySalary=$" + formatToCurrency(getMonthlyWages()) + '}';
+                + ", monthlySalary=$" + formatToCurrency(getMonthlyWages()) + "}\n";
     }
     
     

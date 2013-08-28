@@ -64,7 +64,7 @@ public class SalaryPlusBonusEmployee {
                 + ", age=" + age 
                 + ", gender=" + gender 
                 + ", yearlySalary=" + yearlySalary 
-                + ", bonus=" + bonus + '}';
+                + ", bonus=" + bonus + "}\n";
     }
     
     

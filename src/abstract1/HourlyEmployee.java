@@ -33,8 +33,8 @@ public class HourlyEmployee extends Employee{
     @Override
     public String toString() {
         return super.toString() 
-                + " HourlyEmployee{" + "hourlyWage=$" + formatToCurrency(hourlyWage) 
+                + "HourlyEmployee{" + "hourlyWage=$" + formatToCurrency(hourlyWage) 
                 + ", hoursWorked=" + hoursWorked 
-                + ", wages=$" + formatToCurrency(getWages()) + '}';
+                + ", wages=$" + formatToCurrency(getWages()) + "}\n";
     }
 }

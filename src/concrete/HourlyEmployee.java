@@ -65,7 +65,7 @@ public class HourlyEmployee {
                 + ", age=" + age 
                 + ", gender=" + gender 
                 + ", hourlyWage=" + hourlyWage 
-                + ", hoursWorked=" + hoursWorked + '}';
+                + ", hoursWorked=" + hoursWorked + "}\n";
     }
     
     
