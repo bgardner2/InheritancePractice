@@ -1,8 +1,9 @@
-package concrete;
+package abstract1;
 
+import concrete.*;
 import java.text.DecimalFormat;
 
-public class Employee {
+public abstract class Employee {
     private String name;
     private int age;
     private String gender;
@@ -49,11 +50,7 @@ public class Employee {
         return hourFormatter.format(hours);
     }
     
-    public void changeAllFields(String name, int age, String gender){
-        this.name = name;
-        this.age = age;
-        this.gender = gender;
-    }
+    public abstract void work();
 
     @Override
     public String toString() {

@@ -1,4 +1,6 @@
-package concrete;
+package abstract1;
+
+
 
 public class HourlyEmployee extends Employee{
     private double hourlyWage;
@@ -30,13 +32,20 @@ public class HourlyEmployee extends Employee{
         return this.hoursWorked * this.hourlyWage;
     }
     
-    public void changeAllFields(String name, int age, String gender, double hourlyWage, double hoursWorked){
-        super.changeAllFields(name, age, gender);
-        this.hourlyWage = hourlyWage;
+    public void changeAllFields(String name, int age, String gender, double hoursWorked, double hourlyWage) {
+        super.setName(name);
+        super.setAge(age);
+        super.setGender(gender);
         this.hoursWorked = hoursWorked;
+        this.hourlyWage = hourlyWage;
+        
+    }
+    
+    @Override
+    public void work(){
+        System.out.println("You will get paid by the hour\n");
     }
 
-    
     @Override
     public String toString() {
         return super.toString() 
@@ -44,4 +53,6 @@ public class HourlyEmployee extends Employee{
                 + ", hoursWorked=" + formatHours(hoursWorked) 
                 + ", wages=$" + formatToCurrency(getWages()) + "}\n";
     }
+
+    
 }

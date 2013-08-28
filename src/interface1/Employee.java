@@ -9,5 +9,5 @@ package interface1;
  * @author Ben
  */
 public interface Employee {
-    
+    void work();
 }

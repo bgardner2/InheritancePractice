@@ -1,4 +1,6 @@
-package concrete;
+package abstract1;
+
+
 
 public class SalaryPlusBonusEmployee extends SalariedEmployee {
     private double bonus = 0;
@@ -15,11 +17,14 @@ public class SalaryPlusBonusEmployee extends SalariedEmployee {
         this.bonus = bonus;
     }    
     
-    public void changeAllFields(String name, int age, String gender, double yearlySalary, double bonus){
-        super.changeAllFields(name, age, gender, yearlySalary);
+    public void changeAllFields(String name, int age, String gender, double yearlySalary, double bonus) {
+        super.setName(name);
+        super.setAge(age);
+        super.setGender(gender);
+        super.setYearlySalary(yearlySalary);  
         this.bonus = bonus;
     }
-
+    
     @Override
     public String toString() {
         return super.toString() + "SalaryPlusBonusEmployee{" 
