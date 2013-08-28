@@ -35,6 +35,27 @@ public class SalariedEmployee extends Employee{
     }
     
     @Override
+    public void displayTest(abstract1.Employee employee) {
+        System.out.println("____________________________");
+        System.out.println("____AalariedEmployee Class____");
+        System.out.println("____________________________\n");
+        
+        
+        //print concreteeEmployee as is
+        System.out.println("---Test for umodified Hourly employee");
+        System.out.println(employee);
+        employee.work();
+        
+        //Cast abstractEmployee to Hourly Employee and Change parameters in HourlyEmployee
+        ((abstract1.SalariedEmployee)employee).changeAllFields("Joe", 68, "Male", 100000);
+        
+        //print modified Concrete Employee      
+        System.out.println("---Test for modified Hourly employee:");
+        System.out.println(employee);
+        employee.work();
+    }
+    
+    @Override
     public String toString() {
         return super.toString() + "SalariedEmployee{" 
                 + "yearlySalary=$" + formatToCurrency(yearlySalary) 

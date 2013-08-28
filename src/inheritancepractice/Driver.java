@@ -90,68 +90,19 @@ public class Driver {
         --------------------------*/ 
         
         System.out.println("------------ABSTRACT EMPLOYEES------------\n");
-        
-        abstract1.Employee abstractEmployee;
-        
-        //Test hourly employee
-        System.out.println("____________________________");
-        System.out.println("____HourlyEmployee Class____");
-        System.out.println("____________________________\n");
-        
-        abstractEmployee = new abstract1.HourlyEmployee("ben", 27, "male", 20, 40);
-        
-        //print concreteeEmployee as is
-        System.out.println("---Test for umodified Hourly employee");
-        System.out.println(abstractEmployee);
-        abstractEmployee.work();
-        
-        //Cast abstractEmployee to Hourly Employee and Change parameters in HourlyEmployee
-        ((abstract1.HourlyEmployee)abstractEmployee).changeAllFields("Joe", 68, "Male", 52, 38);
-        
-        //print modified Concrete Employee      
-        System.out.println("---Test for modified Hourly employee:");
-        System.out.println(abstractEmployee);
-        abstractEmployee.work();
+
+        //Test hourly employee 
+        abstract1.Employee abstractEmployee = new HourlyEmployee("ben", 27, "male", 20, 40);
+        abstractEmployee.displayTest(abstractEmployee);
         
         //Test Salaried employee
-        System.out.println("____________________________");
-        System.out.println("___SalariedEmployee Class___");
-        System.out.println("____________________________\n");
         abstractEmployee = new abstract1.SalariedEmployee("Jill", 35, "female", 30000);
-        
-        //Print unmodifed abstractEmployee as is
-        System.out.println("---Test for umodified Salary employee");
-        System.out.println(abstractEmployee);
-        abstractEmployee.work();
-        
-        //Cast abstractEmployee to SalariedEmployee and Change parameters in SalariedEmployee
-        ((abstract1.SalariedEmployee)abstractEmployee).changeAllFields("Jimmy", 90, "Male", 78000);
-        
-        
-        //print modified abstractEmployee      
-        System.out.println("---Test for modified Salary employee:");
-        System.out.println(abstractEmployee);
-        abstractEmployee.work();
+        abstractEmployee.displayTest(abstractEmployee);
         
         //Test Salaried plus bonus employee
-        System.out.println("_______________________________________");
-        System.out.println("____SalariedPlusBonusEmployee Class____");
-        System.out.println("_______________________________________\n");
         abstractEmployee = new abstract1.SalaryPlusBonusEmployee(
                 "Jane", 42, "female", 50000);
-        
-        //Print unmodifed abstractEmployee as is
-        System.out.println("---Test for umodified Salary employee");
-        System.out.println(abstractEmployee);
-        abstractEmployee.work();
-        
-        //Cast employee to a SalaryBonusEmployee and change all fields
-        ((abstract1.SalaryPlusBonusEmployee)abstractEmployee).changeAllFields("John", 33, "Male", 200000, 30000);
-        
-        //Print modified SalarayPlusBonusEmployee
-        System.out.println("---Test for salaried employee with bonus:");
-        System.out.println(abstractEmployee);
-        abstractEmployee.work();
+        abstractEmployee.displayTest(abstractEmployee);
         
         
         /* Interface CLASS TESTING

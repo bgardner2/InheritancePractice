@@ -51,6 +51,8 @@ public abstract class Employee {
     }
     
     public abstract void work();
+    
+    public abstract void displayTest(abstract1.Employee employee);
 
     @Override
     public String toString() {
