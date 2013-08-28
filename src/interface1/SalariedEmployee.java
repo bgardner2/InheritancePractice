@@ -1,8 +1,6 @@
-package abstract1;
+package interface1;
 
-import concrete.*;
-
-public class SalariedEmployee extends Employee{
+public class SalariedEmployee extends Employee implements EmployeeInterface{
     private double yearlySalary;
 
     public SalariedEmployee(String name, int age, String gender, double yearlySalary) {
@@ -35,7 +33,7 @@ public class SalariedEmployee extends Employee{
     }
     
     @Override
-    public void displayTest(abstract1.Employee employee) {
+    public void displayTest(Employee employee) {
         String className = employee.getClass().getSimpleName();
         System.out.println("_______________________________");
         System.out.println("____" + className + " Class____");
@@ -45,15 +43,15 @@ public class SalariedEmployee extends Employee{
         //print concreteeEmployee as is
         System.out.println("---Test for umodified Salary employee");
         System.out.println(employee);
-        employee.work();
+        this.work();
         
         //Cast abstractEmployee to Hourly Employee and Change parameters in HourlyEmployee
-        ((abstract1.SalariedEmployee)employee).changeAllFields("Joe", 68, "Male", 100000);
+        ((SalariedEmployee)employee).changeAllFields("Cecil", 14, "Male", 13000);
         
         //print modified Concrete Employee      
         System.out.println("---Test for modified Salary employee:");
         System.out.println(employee);
-        employee.work();
+        this.work();
     }
     
     @Override
@@ -62,6 +60,8 @@ public class SalariedEmployee extends Employee{
                 + "yearlySalary=$" + formatToCurrency(yearlySalary) 
                 + ", monthlySalary=$" + formatToCurrency(getMonthlyWages()) + "}\n";
     }
+
+
     
     
     
