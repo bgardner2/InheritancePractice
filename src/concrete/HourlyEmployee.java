@@ -1,42 +1,13 @@
 package concrete;
 
-public class HourlyEmployee {
-    private String name;
-    private int age;
-    private String gender;
+public class HourlyEmployee extends Employee{
     private double hourlyWage;
     private double hoursWorked;
 
-    public HourlyEmployee(String name, int age, String gender, double hourlyWage, double hoursWorked) {
-        this.name = name;
-        this.age = age;
-        this.gender = gender;
+    public HourlyEmployee(String name, int age, String gender,double hourlyWage, double hoursWorked) {
+        super(name, age, gender);
         this.hourlyWage = hourlyWage;
         this.hoursWorked = hoursWorked;
-    }
-
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public int getAge() {
-        return age;
-    }
-
-    public void setAge(int age) {
-        this.age = age;
-    }
-
-    public String getGender() {
-        return gender;
-    }
-
-    public void setGender(String gender) {
-        this.gender = gender;
     }
 
     public double getHourlyWage() {
@@ -61,12 +32,9 @@ public class HourlyEmployee {
 
     @Override
     public String toString() {
-        return "HourlyEmployee{" + "name=" + name 
-                + ", age=" + age 
-                + ", gender=" + gender 
-                + ", hourlyWage=" + hourlyWage 
-                + ", hoursWorked=" + hoursWorked + "}\n";
+        return super.toString() 
+                + "HourlyEmployee{" + "hourlyWage=$" + formatToCurrency(hourlyWage) 
+                + ", hoursWorked=" + formatHours(hoursWorked) 
+                + ", wages=$" + formatToCurrency(getWages()) + "}\n";
     }
-    
-    
 }
