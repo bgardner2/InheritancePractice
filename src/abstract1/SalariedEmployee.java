@@ -1,6 +1,6 @@
 package abstract1;
 
-import concrete.*;
+
 
 public class SalariedEmployee extends Employee{
     private double yearlySalary;
@@ -35,25 +35,25 @@ public class SalariedEmployee extends Employee{
     }
     
     @Override
-    public void displayTest(abstract1.Employee employee) {
-        String className = employee.getClass().getSimpleName();
+    public void displayTest() {
+        String className = getClass().getSimpleName();
         System.out.println("_______________________________");
         System.out.println("____" + className + " Class____");
         System.out.println("_______________________________\n");
         
         
-        //print concreteeEmployee as is
+        //print as is
         System.out.println("---Test for umodified Salary employee");
-        System.out.println(employee);
-        employee.work();
+        System.out.println(this);
+        work();
         
-        //Cast abstractEmployee to Hourly Employee and Change parameters in HourlyEmployee
-        ((abstract1.SalariedEmployee)employee).changeAllFields("Joe", 68, "Male", 100000);
+        //Change parameters
+        changeAllFields("Joe", 68, "Male", 100000);
         
-        //print modified Concrete Employee      
+        //print modified       
         System.out.println("---Test for modified Salary employee:");
-        System.out.println(employee);
-        employee.work();
+        System.out.println(this);
+        work();
     }
     
     @Override

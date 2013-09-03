@@ -33,8 +33,8 @@ public class SalariedEmployee extends Employee implements EmployeeInterface{
     }
     
     @Override
-    public void displayTest(Employee employee) {
-        String className = employee.getClass().getSimpleName();
+    public void displayTest() {
+        String className = getClass().getSimpleName();
         System.out.println("_______________________________");
         System.out.println("____" + className + " Class____");
         System.out.println("_______________________________\n");
@@ -42,15 +42,15 @@ public class SalariedEmployee extends Employee implements EmployeeInterface{
         
         //print concreteeEmployee as is
         System.out.println("---Test for umodified Salary employee");
-        System.out.println(employee);
+        System.out.println(this);
         this.work();
         
-        //Cast abstractEmployee to Hourly Employee and Change parameters in HourlyEmployee
-        ((SalariedEmployee)employee).changeAllFields("Cecil", 14, "Male", 13000);
+        //Change parameters in HourlyEmployee
+        changeAllFields("Cecil", 14, "Male", 13000);
         
-        //print modified Concrete Employee      
+        //print modified Employee      
         System.out.println("---Test for modified Salary employee:");
-        System.out.println(employee);
+        System.out.println(this);
         this.work();
     }
     

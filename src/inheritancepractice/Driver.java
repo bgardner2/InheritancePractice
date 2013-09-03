@@ -93,17 +93,17 @@ public class Driver {
 
         //Test hourly employee 
         abstract1.Employee abstractEmployee = new HourlyEmployee("ben", 27, "male", 20, 40);
-        abstractEmployee.displayTest(abstractEmployee);
+        abstractEmployee.displayTest();
         
         //Test Salaried employee
         abstractEmployee = new abstract1.SalariedEmployee("Jill", 35, "female", 30000);
-        abstractEmployee.displayTest(abstractEmployee);
+        abstractEmployee.displayTest();
         
         //Test Salaried plus bonus employee
         abstractEmployee = new abstract1.SalaryPlusBonusEmployee(
                 "Jane", 42, "female", 50000);
         ((abstract1.SalaryPlusBonusEmployee)abstractEmployee).setBonus(100000000);
-        abstractEmployee.displayTest(abstractEmployee);
+        abstractEmployee.displayTest();
         
         
         
@@ -114,17 +114,17 @@ public class Driver {
         
         //Test hourly employee 
         interface1.HourlyEmployee interfaceEmployee1 = new interface1.HourlyEmployee("ben", 27, "male", 20, 40);
-        interfaceEmployee1.displayTest(interfaceEmployee1);
+        interfaceEmployee1.displayTest();
         
         //Test Salaried employee
         interface1.SalariedEmployee interfaceEmployee2 = new interface1.SalariedEmployee("Jill", 35, "female", 30000);
-        interfaceEmployee2.displayTest(interfaceEmployee2);
+        interfaceEmployee2.displayTest();
         
         //Test Salaried plus bonus employee
         interfaceEmployee2 = new interface1.SalaryPlusBonusEmployee(
                 "Jane", 42, "female", 50000);
         ((interface1.SalaryPlusBonusEmployee)interfaceEmployee2).setBonus(100000);
-        interfaceEmployee2.displayTest(interfaceEmployee2);
+        interfaceEmployee2.displayTest();
     }
 
 }

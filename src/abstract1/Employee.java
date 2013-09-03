@@ -1,6 +1,5 @@
 package abstract1;
 
-import concrete.*;
 import java.text.DecimalFormat;
 
 public abstract class Employee {
@@ -52,7 +51,7 @@ public abstract class Employee {
     
     public abstract void work();
     
-    public abstract void displayTest(abstract1.Employee employee);
+    public abstract void displayTest();
 
     @Override
     public String toString() {

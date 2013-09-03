@@ -18,10 +18,7 @@ public class SalaryPlusBonusEmployee extends SalariedEmployee {
     }    
     
     public void changeAllFields(String name, int age, String gender, double yearlySalary, double bonus) {
-        super.setName(name);
-        super.setAge(age);
-        super.setGender(gender);
-        super.setYearlySalary(yearlySalary);  
+        super.changeAllFields(name, age, gender, yearlySalary);  
         this.bonus = bonus;
     }
     

@@ -10,5 +10,5 @@ package interface1;
  */
 public interface EmployeeInterface {
     void work();
-    void displayTest(interface1.Employee employee);
+    void displayTest();
 }
